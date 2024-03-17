@@ -1,0 +1,2821 @@
+ // menuItemList.contains(0) == "true"
+            //     ?
+            // menuItemList.contains(1).toString() == "true"
+            //     ? /*Column(
+            //         children: [
+            //           Text(
+            //             "Newly Launched",
+            //             style: Text_Lit_Bold,
+            //           ),
+            //           GridView.builder(
+            //               itemBuilder: (context, index) {
+            //                 return Container(
+            //                     height: h,
+            //                     decoration: BoxDecoration(
+            //                         borderRadius: BorderRadius.circular(5),
+            //                         color: Colors.white,
+            //                         boxShadow: [
+            //                           BoxShadow(
+            //                               color: Colors.grey.shade300,
+            //                               blurRadius: 3)
+            //                         ]),
+            //                     child: Column(
+            //                       crossAxisAlignment: CrossAxisAlignment.start,
+            //                       children: [
+            //                         Image.asset(
+            //                           "assets/images/pizza_banner.png",
+            //                           fit: BoxFit.fill,
+            //                           height: h / 5,
+            //                           width: w / 2,
+            //                         ),
+            //                         Text(
+            //                           "Schezwan Margherita",
+            //                           style: A_style_order,
+            //                           maxLines: 2,
+            //                         ),
+            //                         SizedBox(
+            //                           height: h / 100,
+            //                         ),
+            //                         Container(
+            //                             margin: EdgeInsets.all(2),
+            //                             padding: const EdgeInsets.all(4),
+            //                             decoration: BoxDecoration(
+            //                                 borderRadius:
+            //                                     BorderRadius.circular(2),
+            //                                 color: Colors.white,
+            //                                 boxShadow: [
+            //                                   BoxShadow(
+            //                                       color: Colors.grey.shade300,
+            //                                       blurRadius: 3)
+            //                                 ]),
+            //                             child: Image.asset(
+            //                               "assets/images/chily.png",
+            //                               height: 20,
+            //                             )),
+            //                         Container(
+            //                           width: w / 4.5,
+            //                           height: h / 20,
+            //                           padding:
+            //                           const EdgeInsets.only(left: 4),
+            //                           decoration: BoxDecoration(
+            //                               borderRadius:
+            //                                   BorderRadius.circular(5),
+            //                               border: Border.all(
+            //                                   color: Colors.black12, width: 1)),
+            //                           child: DropdownButton<String>(
+            //                             underline: const SizedBox(),
+            //                             value: _selectedItem,
+            //                             items:
+            //                                 _dropdownItems.map((String item) {
+            //                               return DropdownMenuItem<String>(
+            //                                 value: item,
+            //                                 child: Text(item),
+            //                               );
+            //                             }).toList(),
+            //                             onChanged: (String? newValue) {
+            //                               setState(() {
+            //                                 _selectedItem = newValue!;
+            //                               });
+            //                             },
+            //                           ),
+            //                         ),
+            //                       ],
+            //                     ));
+            //               },
+            //               physics: const NeverScrollableScrollPhysics(),
+            //               shrinkWrap: true,
+            //               itemCount: 2,
+            //               gridDelegate:
+            //                   SliverGridDelegateWithFixedCrossAxisCount(
+            //                 crossAxisCount: 2,
+            //                 mainAxisSpacing: 10,
+            //                 crossAxisSpacing: 10,
+            //                 childAspectRatio:
+            //                     MediaQuery.of(context).size.width /
+            //                         (MediaQuery.of(context).size.height / 1.2),
+            //               )),
+            //         ],
+            //       )*/
+            //     ListView.builder(
+            //         itemCount: deals.length,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return InkWell(
+            //             onTap: () {
+            //               Get.to(() => const OrderDetails());
+            //             },
+            //             child: Column(
+            //               children: [
+            //                 Stack(children: [
+            //                   Container(
+            //                     margin: const EdgeInsets.all(3),
+            //                     width: w / 1.043,
+            //                     height: h / 3.5,
+            //                     decoration: BoxDecoration(
+            //                         borderRadius: BorderRadius.circular(8),
+            //                         image: DecorationImage(
+            //                           image: AssetImage(
+            //                             deals[index]["image"],
+            //                           ),
+            //                           fit: BoxFit.cover,
+            //                         )),
+            //                   ),
+            //                   Positioned(
+            //                     bottom: 0,
+            //                     child: Container(
+            //                       width: w / 1.043,
+            //                       margin: const EdgeInsets.all(3),
+            //                       padding: const EdgeInsets.all(10),
+            //                       decoration: const BoxDecoration(
+            //                         gradient: LinearGradient(
+            //                             begin: Alignment.topCenter,
+            //                             end: Alignment.bottomCenter,
+            //                             colors: [
+            //                               // Color(0xff08080863),
+            //                               // Color(0xff080808)
+            //                               Color(0xff08080863),
+            //                               Colors.black,
+            //                             ]),
+            //                         borderRadius: BorderRadius.only(
+            //                             bottomRight: Radius.circular(8),
+            //                             bottomLeft: Radius.circular(8)),
+            //                       ),
+            //                       child: Column(
+            //                         crossAxisAlignment:
+            //                             CrossAxisAlignment.start,
+            //                         children: [
+            //                           SizedBox(
+            //                             height: h / 30,
+            //                           ),
+            //                           Text(
+            //                             "Veg Pizza",
+            //                             style: TextBold,
+            //                           ),
+            //                           Text(
+            //                             deals[index]["size"],
+            //                             style: const TextStyle(
+            //                                 //letterSpacing: 2,
+            //                                 overflow: TextOverflow.ellipsis,
+            //                                 color: Colors.white,
+            //
+            //                                 //  fontFamily: "Amazon_med",
+            //                                 fontSize: 14),
+            //                             maxLines: 1,
+            //                           ),
+            //                           Row(
+            //                             mainAxisAlignment:
+            //                                 MainAxisAlignment.spaceBetween,
+            //                             children: [
+            //                               Text(
+            //                                 "CAD 49",
+            //                                 style: TextBold,
+            //                               ),
+            //                               Container(
+            //                                 padding: const EdgeInsets.symmetric(
+            //                                     horizontal: 8, vertical: 2),
+            //                                 decoration: BoxDecoration(
+            //                                   color: primaryColor,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(5),
+            //                                 ),
+            //                                 child: Text(
+            //                                   "Order Now",
+            //                                   style: Text_inside_button,
+            //                                 ),
+            //                               )
+            //                             ],
+            //                           ),
+            //                         ],
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ]),
+            //                 SizedBox(
+            //                   height: h / 80,
+            //                 ),
+            //               ],
+            //             ),
+            //           );
+            //         })
+            //     : const SizedBox(),
+            // menuItemList.contains(2).toString() == "true"
+            //     ? ListView.builder(
+            //         itemCount: 1,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return GetBuilder<PizzaController>(
+            //               builder: (PizzaController controller) {
+            //             return Column(
+            //                 crossAxisAlignment: CrossAxisAlignment.start,
+            //                 children: [
+            //                   ClipRRect(
+            //                     borderRadius: BorderRadius.circular(8),
+            //                     child: Image.asset(
+            //                       "assets/images/img_5.png",
+            //                       fit: BoxFit.cover,
+            //                       width: w,
+            //                       height: h / 3,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Text(
+            //                     "Wings + Bites",
+            //                     style: Text_Lit_Bold,
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Hot + Spicy Wings CAD7',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           Text(
+            //                             "Perfectly spicy. These wings are dry-rubbed with cayenne + paper to give them their kick",
+            //                             style: A_style_order,
+            //                             maxLines: 3,
+            //                           ),
+            //                           Theme(
+            //                             data: Theme.of(context).copyWith(
+            //                                 dividerColor: Colors.transparent),
+            //                             child: ExpansionTile(
+            //                                 tilePadding: EdgeInsets.all(0),
+            //                                 iconColor: Colors.black,
+            //                                 title: Text('Add a Dip',
+            //                                     style: A_style_medium),
+            //                                 children: [
+            //                                   GetBuilder<PizzaController>(
+            //                                       builder: (PizzaController
+            //                                           controller) {
+            //                                     return Container(
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.white,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20),
+            //                                           boxShadow: [
+            //                                             BoxShadow(
+            //                                                 color: Colors
+            //                                                     .grey.shade300,
+            //                                                 blurRadius: 3)
+            //                                           ]),
+            //                                       child: Row(
+            //                                         mainAxisAlignment:
+            //                                             MainAxisAlignment
+            //                                                 .spaceBetween,
+            //                                         children: [
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .decrement();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topLeft: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomLeft: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "-",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           ),
+            //                                           Text(
+            //                                             "QTy:${controller.counter}",
+            //                                             style: const TextStyle(
+            //                                                 color:
+            //                                                     Colors.black),
+            //                                           ),
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .increment();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topRight: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomRight: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "+",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           )
+            //                                         ],
+            //                                       ),
+            //                                     );
+            //                                   }),
+            //                                   SizedBox(
+            //                                     height: h / 80,
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       Get.to(
+            //                                           () => const YourOrder());
+            //                                     },
+            //                                     child: Container(
+            //                                       width: w,
+            //                                       padding: EdgeInsets.all(8),
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20)),
+            //                                       child: Text(
+            //                                         "Add to Order",
+            //                                         style: TextBold,
+            //                                         textAlign: TextAlign.center,
+            //                                       ),
+            //                                     ),
+            //                                   )
+            //                                 ]),
+            //                           ),
+            //                           SizedBox(
+            //                             height: h / 60,
+            //                           ),
+            //                           // GetBuilder<PizzaController>(builder:
+            //                           //     (PizzaController controller) {
+            //                           //   return Container(
+            //                           //     decoration: BoxDecoration(
+            //                           //         color: Colors.white,
+            //                           //         borderRadius:
+            //                           //             BorderRadius.circular(20),
+            //                           //         boxShadow: [
+            //                           //           BoxShadow(
+            //                           //               color: Colors.grey.shade300,
+            //                           //               blurRadius: 3)
+            //                           //         ]),
+            //                           //     child: Row(
+            //                           //       mainAxisAlignment:
+            //                           //           MainAxisAlignment.spaceBetween,
+            //                           //       children: [
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.decrement();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topLeft: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomLeft: Radius
+            //                           //                             .circular(
+            //                           //                                 20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "-",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         ),
+            //                           //         Text(
+            //                           //           "QTy:${controller.counter}",
+            //                           //           style: const TextStyle(
+            //                           //               color: Colors.black),
+            //                           //         ),
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.increment();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topRight: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomRight:
+            //                           //                             Radius
+            //                           //                                 .circular(
+            //                           //                                     20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "+",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         )
+            //                           //       ],
+            //                           //     ),
+            //                           //   );
+            //                           // }),
+            //                         ]),
+            //                   ),
+
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Honey + Garlic Wings CAD2',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                 ]);
+            //           });
+            //           /* Container(
+            //                 width: w / 1.043,
+            //                 decoration: const BoxDecoration(
+            //                   borderRadius: BorderRadius.only(
+            //                       bottomRight: Radius.circular(8),
+            //                       bottomLeft: Radius.circular(8)),
+            //                 ),
+            //                 child: Column(
+            //                   crossAxisAlignment: CrossAxisAlignment.start,
+            //                   children: [
+            //                     SizedBox(
+            //                       height: h / 30,
+            //                     ),
+            //                     Text(
+            //                       "Veg Pizza",
+            //                       style: TextBold,
+            //                     ),
+            //                     Text(
+            //                       deals[index]["size"],
+            //                       style: TextStyle(
+            //                           //letterSpacing: 2,
+            //                           overflow: TextOverflow.ellipsis,
+            //                           color: Colors.white,
+            //
+            //                           //  fontFamily: "Amazon_med",
+            //                           fontSize: 14),
+            //                       maxLines: 1,
+            //                     ),
+            //                     Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text(
+            //                           "CAD 49",
+            //                           style: TextBold,
+            //                         ),
+            //                         Container(
+            //                           padding: const EdgeInsets.symmetric(
+            //                               horizontal: 8, vertical: 2),
+            //                           decoration: BoxDecoration(
+            //                             color: primaryColor,
+            //                             borderRadius:
+            //                                 BorderRadius.circular(5),
+            //                           ),
+            //                           child: Text(
+            //                             "Order Now",
+            //                             style: Text_inside_button,
+            //                           ),
+            //                         )
+            //                       ],
+            //                     ),
+            //                   ],
+            //                 ),
+            //               ),*/
+            //         })
+            //     : const SizedBox(),
+            // menuItemList.contains(3).toString() == "true"
+            //     ? ListView.builder(
+            //         itemCount: 1,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return GetBuilder<PizzaController>(
+            //               builder: (PizzaController controller) {
+            //             return Column(
+            //                 crossAxisAlignment: CrossAxisAlignment.start,
+            //                 children: [
+            //                   ClipRRect(
+            //                     borderRadius: BorderRadius.circular(8),
+            //                     child: Image.asset(
+            //                       "assets/images/lava_cake.png",
+            //                       fit: BoxFit.cover,
+            //                       width: w,
+            //                       height: h / 3,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Text(
+            //                     "Lava cake",
+            //                     style: Text_Lit_Bold,
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Cold + Coffee CAD7',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           Text(
+            //                             "Perfectly spicy. These wings are dry-rubbed with cayenne + paper to give them their kick",
+            //                             style: A_style_order,
+            //                             maxLines: 3,
+            //                           ),
+            //                           Theme(
+            //                             data: Theme.of(context).copyWith(
+            //                                 dividerColor: Colors.transparent),
+            //                             child: ExpansionTile(
+            //                                 tilePadding: EdgeInsets.all(0),
+            //                                 iconColor: Colors.black,
+            //                                 title: Text('Add a Dip',
+            //                                     style: A_style_medium),
+            //                                 children: [
+            //                                   GetBuilder<PizzaController>(
+            //                                       builder: (PizzaController
+            //                                           controller) {
+            //                                     return Container(
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.white,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20),
+            //                                           boxShadow: [
+            //                                             BoxShadow(
+            //                                                 color: Colors
+            //                                                     .grey.shade300,
+            //                                                 blurRadius: 3)
+            //                                           ]),
+            //                                       child: Row(
+            //                                         mainAxisAlignment:
+            //                                             MainAxisAlignment
+            //                                                 .spaceBetween,
+            //                                         children: [
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .decrement();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topLeft: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomLeft: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "-",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           ),
+            //                                           Text(
+            //                                             "QTy:${controller.counter}",
+            //                                             style: const TextStyle(
+            //                                                 color:
+            //                                                     Colors.black),
+            //                                           ),
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .increment();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topRight: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomRight: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "+",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           )
+            //                                         ],
+            //                                       ),
+            //                                     );
+            //                                   }),
+            //                                   SizedBox(
+            //                                     height: h / 80,
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       Get.to(
+            //                                           () => const YourOrder());
+            //                                     },
+            //                                     child: Container(
+            //                                       width: w,
+            //                                       padding: EdgeInsets.all(8),
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20)),
+            //                                       child: Text(
+            //                                         "Add to Order",
+            //                                         style: TextBold,
+            //                                         textAlign: TextAlign.center,
+            //                                       ),
+            //                                     ),
+            //                                   )
+            //                                 ]),
+            //                           ),
+            //                           SizedBox(
+            //                             height: h / 60,
+            //                           ),
+            //                           // GetBuilder<PizzaController>(builder:
+            //                           //     (PizzaController controller) {
+            //                           //   return Container(
+            //                           //     decoration: BoxDecoration(
+            //                           //         color: Colors.white,
+            //                           //         borderRadius:
+            //                           //             BorderRadius.circular(20),
+            //                           //         boxShadow: [
+            //                           //           BoxShadow(
+            //                           //               color: Colors.grey.shade300,
+            //                           //               blurRadius: 3)
+            //                           //         ]),
+            //                           //     child: Row(
+            //                           //       mainAxisAlignment:
+            //                           //           MainAxisAlignment.spaceBetween,
+            //                           //       children: [
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.decrement();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topLeft: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomLeft: Radius
+            //                           //                             .circular(
+            //                           //                                 20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "-",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         ),
+            //                           //         Text(
+            //                           //           "QTy:${controller.counter}",
+            //                           //           style: const TextStyle(
+            //                           //               color: Colors.black),
+            //                           //         ),
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.increment();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topRight: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomRight:
+            //                           //                             Radius
+            //                           //                                 .circular(
+            //                           //                                     20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "+",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         )
+            //                           //       ],
+            //                           //     ),
+            //                           //   );
+            //                           // }),
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Hot + Spicy Wings CAD6',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Honey + Garlic Wings CAD4',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                 ]);
+            //           });
+            //         })
+            //     : const SizedBox(),
+            // menuItemList.contains(4).toString() == "true"
+            //     ? ListView.builder(
+            //         itemCount: 1,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return GetBuilder<PizzaController>(
+            //               builder: (PizzaController controller) {
+            //             return Column(
+            //                 crossAxisAlignment: CrossAxisAlignment.start,
+            //                 children: [
+            //                   ClipRRect(
+            //                     borderRadius: BorderRadius.circular(8),
+            //                     child: Image.asset(
+            //                       "assets/images/drink.png",
+            //                       fit: BoxFit.cover,
+            //                       width: w,
+            //                       height: h / 3,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Text(
+            //                     "Drinks",
+            //                     style: Text_Lit_Bold,
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Coke CAD 2',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           Text(
+            //                             "Perfectly spicy. These wings are dry-rubbed with cayenne + paper to give them their kick",
+            //                             style: A_style_order,
+            //                             maxLines: 3,
+            //                           ),
+            //                           Theme(
+            //                             data: Theme.of(context).copyWith(
+            //                                 dividerColor: Colors.transparent),
+            //                             child: ExpansionTile(
+            //                                 tilePadding: EdgeInsets.all(0),
+            //                                 iconColor: Colors.black,
+            //                                 title: Text('Add a Dip',
+            //                                     style: A_style_medium),
+            //                                 children: [
+            //                                   GetBuilder<PizzaController>(
+            //                                       builder: (PizzaController
+            //                                           controller) {
+            //                                     return Container(
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.white,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20),
+            //                                           boxShadow: [
+            //                                             BoxShadow(
+            //                                                 color: Colors
+            //                                                     .grey.shade300,
+            //                                                 blurRadius: 3)
+            //                                           ]),
+            //                                       child: Row(
+            //                                         mainAxisAlignment:
+            //                                             MainAxisAlignment
+            //                                                 .spaceBetween,
+            //                                         children: [
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .decrement();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topLeft: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomLeft: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "-",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           ),
+            //                                           Text(
+            //                                             "QTy:${controller.counter}",
+            //                                             style: const TextStyle(
+            //                                                 color:
+            //                                                     Colors.black),
+            //                                           ),
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .increment();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topRight: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomRight: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "+",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           )
+            //                                         ],
+            //                                       ),
+            //                                     );
+            //                                   }),
+            //                                   SizedBox(
+            //                                     height: h / 80,
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       Get.to(
+            //                                           () => const YourOrder());
+            //                                     },
+            //                                     child: Container(
+            //                                       width: w,
+            //                                       padding: EdgeInsets.all(8),
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20)),
+            //                                       child: Text(
+            //                                         "Add to Order",
+            //                                         style: TextBold,
+            //                                         textAlign: TextAlign.center,
+            //                                       ),
+            //                                     ),
+            //                                   )
+            //                                 ]),
+            //                           ),
+            //                           SizedBox(
+            //                             height: h / 60,
+            //                           ),
+            //                           // GetBuilder<PizzaController>(builder:
+            //                           //     (PizzaController controller) {
+            //                           //   return Container(
+            //                           //     decoration: BoxDecoration(
+            //                           //         color: Colors.white,
+            //                           //         borderRadius:
+            //                           //             BorderRadius.circular(20),
+            //                           //         boxShadow: [
+            //                           //           BoxShadow(
+            //                           //               color: Colors.grey.shade300,
+            //                           //               blurRadius: 3)
+            //                           //         ]),
+            //                           //     child: Row(
+            //                           //       mainAxisAlignment:
+            //                           //           MainAxisAlignment.spaceBetween,
+            //                           //       children: [
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.decrement();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topLeft: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomLeft: Radius
+            //                           //                             .circular(
+            //                           //                                 20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "-",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         ),
+            //                           //         Text(
+            //                           //           "QTy:${controller.counter}",
+            //                           //           style: const TextStyle(
+            //                           //               color: Colors.black),
+            //                           //         ),
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.increment();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topRight: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomRight:
+            //                           //                             Radius
+            //                           //                                 .circular(
+            //                           //                                     20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "+",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         )
+            //                           //       ],
+            //                           //     ),
+            //                           //   );
+            //                           // }),
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Diet Coke CAD5',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Sprite CAD8',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Bottle Water CAD8',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Orange CAD1',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                 ]);
+            //           });
+            //           /* Container(
+            //                 width: w / 1.043,
+            //                 decoration: const BoxDecoration(
+            //                   borderRadius: BorderRadius.only(
+            //                       bottomRight: Radius.circular(8),
+            //                       bottomLeft: Radius.circular(8)),
+            //                 ),
+            //                 child: Column(
+            //                   crossAxisAlignment: CrossAxisAlignment.start,
+            //                   children: [
+            //                     SizedBox(
+            //                       height: h / 30,
+            //                     ),
+            //                     Text(
+            //                       "Veg Pizza",
+            //                       style: TextBold,
+            //                     ),
+            //                     Text(
+            //                       deals[index]["size"],
+            //                       style: TextStyle(
+            //                           //letterSpacing: 2,
+            //                           overflow: TextOverflow.ellipsis,
+            //                           color: Colors.white,
+            //
+            //                           //  fontFamily: "Amazon_med",
+            //                           fontSize: 14),
+            //                       maxLines: 1,
+            //                     ),
+            //                     Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text(
+            //                           "CAD 49",
+            //                           style: TextBold,
+            //                         ),
+            //                         Container(
+            //                           padding: const EdgeInsets.symmetric(
+            //                               horizontal: 8, vertical: 2),
+            //                           decoration: BoxDecoration(
+            //                             color: primaryColor,
+            //                             borderRadius:
+            //                                 BorderRadius.circular(5),
+            //                           ),
+            //                           child: Text(
+            //                             "Order Now",
+            //                             style: Text_inside_button,
+            //                           ),
+            //                         )
+            //                       ],
+            //                     ),
+            //                   ],
+            //                 ),
+            //               ),*/
+            //         })
+            //     : const SizedBox(),
+            // menuItemList.contains(5).toString() == "true"
+            //     ? ListView.builder(
+            //         itemCount: 1,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return GetBuilder<PizzaController>(
+            //               builder: (PizzaController controller) {
+            //             return Column(
+            //                 crossAxisAlignment: CrossAxisAlignment.start,
+            //                 children: [
+            //                   ClipRRect(
+            //                     borderRadius: BorderRadius.circular(8),
+            //                     child: Image.asset(
+            //                       "assets/images/wings.png",
+            //                       fit: BoxFit.cover,
+            //                       width: w,
+            //                       height: h / 3,
+            //                     ),
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Text(
+            //                     "Wings",
+            //                     style: Text_Lit_Bold,
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Column(
+            //                     crossAxisAlignment: CrossAxisAlignment.start,
+            //                     children: [
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               value: 1,
+            //                               activeColor: primaryColor,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           SizedBox(
+            //                             width: w / 90,
+            //                           ),
+            //                           const Text('10 Piece'),
+            //                           const Spacer(),
+            //                           const Text('CAD 139')
+            //                         ],
+            //                       ),
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               activeColor: primaryColor,
+            //                               value: 4,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           const Text('15 Piece'),
+            //                           const Spacer(),
+            //                           const Text('CAD 239'),
+            //                         ],
+            //                       ),
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               value: 2,
+            //                               activeColor: primaryColor,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           SizedBox(
+            //                             width: w / 90,
+            //                           ),
+            //                           const Text('30 Piece'),
+            //                           const Spacer(),
+            //                           const Text('CAD 239'),
+            //                         ],
+            //                       ),
+            //                     ],
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 80,
+            //                   ),
+            //                   Text(
+            //                     "Select Flavors",
+            //                     style: Text_Lit_Bold,
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 100,
+            //                   ),
+            //                   GestureDetector(
+            //                     onTap: () {
+            //                       showMyDialog(context);
+            //                     },
+            //                     child: Container(
+            //                       width: w / 2,
+            //                       height: h / 15,
+            //                       padding: const EdgeInsets.only(
+            //                         top: 0,
+            //                         left: 3,
+            //                       ),
+            //                       decoration: BoxDecoration(
+            //                         color: Colors.white,
+            //                         borderRadius: BorderRadius.circular(5),
+            //                         border: Border.all(
+            //                             color: Colors.grey, width: 1),
+            //                       ),
+            //                       child: DropdownButton(
+            //                         dropdownColor: Colors.white,
+            //                         underline: const SizedBox(),
+            //                         // Initial Value
+            //                         value: valueChoose,
+            //                         hint: Text('Select Flavors',
+            //                             style:
+            //                                 A_style_medium // Set text color to black
+            //                             ),
+            //                         isExpanded: true,
+            //                         // Down Arrow Icon
+            //                         icon: const Icon(Icons.keyboard_arrow_down,
+            //                             color: Colors.black),
+            //                         // Array list of items
+            //                         items: listitem.map((String items) {
+            //                           return DropdownMenuItem(
+            //                             onTap: () {
+            //                               showMyDialog(context);
+            //                             },
+            //                             value: items,
+            //                             child:
+            //                                 Text(items, style: A_style_medium),
+            //                           );
+            //                         }).toList(),
+            //                         onChanged: (newvalue) {
+            //                           setState(() {
+            //                             valueChoose = newvalue;
+            //                           });
+            //                         },
+            //                       ),
+            //                     ),
+            //                   ),
+            //                 ]);
+            //           });
+            //           /* Container(
+            //                 width: w / 1.043,
+            //                 decoration: const BoxDecoration(
+            //                   borderRadius: BorderRadius.only(
+            //                       bottomRight: Radius.circular(8),
+            //                       bottomLeft: Radius.circular(8)),
+            //                 ),
+            //                 child: Column(
+            //                   crossAxisAlignment: CrossAxisAlignment.start,
+            //                   children: [
+            //                     SizedBox(
+            //                       height: h / 30,
+            //                     ),
+            //                     Text(
+            //                       "Veg Pizza",
+            //                       style: TextBold,
+            //                     ),
+            //                     Text(
+            //                       deals[index]["size"],
+            //                       style: TextStyle(
+            //                           //letterSpacing: 2,
+            //                           overflow: TextOverflow.ellipsis,
+            //                           color: Colors.white,
+            //
+            //                           //  fontFamily: "Amazon_med",
+            //                           fontSize: 14),
+            //                       maxLines: 1,
+            //                     ),
+            //                     Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text(
+            //                           "CAD 49",
+            //                           style: TextBold,
+            //                         ),
+            //                         Container(
+            //                           padding: const EdgeInsets.symmetric(
+            //                               horizontal: 8, vertical: 2),
+            //                           decoration: BoxDecoration(
+            //                             color: primaryColor,
+            //                             borderRadius:
+            //                                 BorderRadius.circular(5),
+            //                           ),
+            //                           child: Text(
+            //                             "Order Now",
+            //                             style: Text_inside_button,
+            //                           ),
+            //                         )
+            //                       ],
+            //                     ),
+            //                   ],
+            //                 ),
+            //               ),*/
+            //         })
+            //     : const SizedBox(),
+            // menuItemList.contains(6).toString() == "true"
+            //     ? ListView.builder(
+            //         itemCount: 1,
+            //         shrinkWrap: true,
+            //         physics: const NeverScrollableScrollPhysics(),
+            //         itemBuilder: (BuildContext context, int index) {
+            //           return GetBuilder<PizzaController>(
+            //               builder: (PizzaController controller) {
+            //             return Column(
+            //                 crossAxisAlignment: CrossAxisAlignment.start,
+            //                 children: [
+            //                   Text("Choose the Size", style: A_style_medium),
+            //                   Column(
+            //                     crossAxisAlignment: CrossAxisAlignment.start,
+            //                     children: [
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               value: 1,
+            //                               activeColor: primaryColor,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           SizedBox(
+            //                             width: w / 90,
+            //                           ),
+            //                           const Text('Large'),
+            //                           const Spacer(),
+            //                           const Text('CAD 139')
+            //                         ],
+            //                       ),
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               activeColor: primaryColor,
+            //                               value: 4,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           const Text('Medium'),
+            //                           const Spacer(),
+            //                           const Text('CAD 239'),
+            //                         ],
+            //                       ),
+            //                       Row(
+            //                         children: [
+            //                           SizedBox(
+            //                             height: 35,
+            //                             width: 35,
+            //                             child: Radio(
+            //                               value: 1,
+            //                               activeColor: primaryColor,
+            //                               groupValue: selectedOption,
+            //                               onChanged: (value) {
+            //                                 setState(() {
+            //                                   selectedOption = value;
+            //                                   print("Button value: $value");
+            //                                 });
+            //                               },
+            //                             ),
+            //                           ),
+            //                           SizedBox(
+            //                             width: w / 90,
+            //                           ),
+            //                           const Text('Small'),
+            //                           const Spacer(),
+            //                           const Text('CAD 239'),
+            //                         ],
+            //                       ),
+            //                     ],
+            //                   ),
+            //                   SizedBox(
+            //                     height: h / 90,
+            //                   ),
+            //                   Text("Choose the Crust", style: A_style_medium),
+            //                   Row(
+            //                     children: [
+            //                       SizedBox(
+            //                         height: 35,
+            //                         width: 35,
+            //                         child: Radio(
+            //                           activeColor: primaryColor,
+            //                           value: 4,
+            //                           groupValue: selectedOption,
+            //                           onChanged: (value) {
+            //                             setState(() {
+            //                               selectedOption = value;
+            //                               print("Button value: $value");
+            //                             });
+            //                           },
+            //                         ),
+            //                       ),
+            //                       const Text('New Hand Tossed'),
+            //                       const Spacer(),
+            //                       const Text('CAD 239'),
+            //                     ],
+            //                   ),
+            //                   Row(
+            //                     children: [
+            //                       SizedBox(
+            //                         height: 35,
+            //                         width: 35,
+            //                         child: Radio(
+            //                           activeColor: primaryColor,
+            //                           value: 4,
+            //                           groupValue: selectedOption,
+            //                           onChanged: (value) {
+            //                             setState(() {
+            //                               selectedOption = value;
+            //                               print("Button value: $value");
+            //                             });
+            //                           },
+            //                         ),
+            //                       ),
+            //                       const Text('100% Wheat Thin Crust'),
+            //                       const Spacer(),
+            //                       const Text('CAD 239'),
+            //                     ],
+            //                   ),
+            //                   Row(
+            //                     children: [
+            //                       SizedBox(
+            //                         height: 35,
+            //                         width: 35,
+            //                         child: Radio(
+            //                           activeColor: primaryColor,
+            //                           value: 6,
+            //                           groupValue: selectedOption,
+            //                           onChanged: (value) {
+            //                             setState(() {
+            //                               selectedOption = value;
+            //                               print("Button value: $value");
+            //                             });
+            //                           },
+            //                         ),
+            //                       ),
+            //                       const Text('Cheese Burst'),
+            //                       const Spacer(),
+            //                       const Text('CAD 239'),
+            //                     ],
+            //                   ),
+            //                   Row(
+            //                     children: [
+            //                       SizedBox(
+            //                         height: 35,
+            //                         width: 35,
+            //                         child: Radio(
+            //                           activeColor: primaryColor,
+            //                           value: 7,
+            //                           groupValue: selectedOption,
+            //                           onChanged: (value) {
+            //                             setState(() {
+            //                               selectedOption = value;
+            //                               print("Button value: $value");
+            //                             });
+            //                           },
+            //                         ),
+            //                       ),
+            //                       const Text('Fresh Pan Pizza'),
+            //                       const Spacer(),
+            //                       const Text('CAD 239'),
+            //                     ],
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Row(
+            //                           children: [
+            //                             // Icon(Icons.sa),
+            //                             Text('Sauces CAD3',
+            //                                 style: A_style_medium),
+            //                           ],
+            //                         ),
+            //                         children: [
+            //                           Text(
+            //                             "Perfectly spicy. These wings are dry-rubbed with cayenne + paper to give them their kick",
+            //                             style: A_style_order,
+            //                             maxLines: 3,
+            //                           ),
+            //                           Theme(
+            //                             data: Theme.of(context).copyWith(
+            //                                 dividerColor: Colors.transparent),
+            //                             child: ExpansionTile(
+            //                                 tilePadding: EdgeInsets.all(0),
+            //                                 iconColor: Colors.black,
+            //                                 title: Text('Add a Dip',
+            //                                     style: A_style_medium),
+            //                                 children: [
+            //                                   GetBuilder<PizzaController>(
+            //                                       builder: (PizzaController
+            //                                           controller) {
+            //                                     return Container(
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.white,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20),
+            //                                           boxShadow: [
+            //                                             BoxShadow(
+            //                                                 color: Colors
+            //                                                     .grey.shade300,
+            //                                                 blurRadius: 3)
+            //                                           ]),
+            //                                       child: Row(
+            //                                         mainAxisAlignment:
+            //                                             MainAxisAlignment
+            //                                                 .spaceBetween,
+            //                                         children: [
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .decrement();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topLeft: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomLeft: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "-",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           ),
+            //                                           Text(
+            //                                             "QTy:${controller.counter}",
+            //                                             style: const TextStyle(
+            //                                                 color:
+            //                                                     Colors.black),
+            //                                           ),
+            //                                           InkWell(
+            //                                             onTap: () {
+            //                                               controller
+            //                                                   .increment();
+            //                                             },
+            //                                             child: Container(
+            //                                                 width: 40,
+            //                                                 decoration:
+            //                                                     const BoxDecoration(
+            //                                                   color:
+            //                                                       Colors.black,
+            //                                                   borderRadius: BorderRadius.only(
+            //                                                       topRight: Radius
+            //                                                           .circular(
+            //                                                               20),
+            //                                                       bottomRight: Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                                 ),
+            //                                                 child: const Text(
+            //                                                   "+",
+            //                                                   style: TextStyle(
+            //                                                       fontSize: 25,
+            //                                                       color: Colors
+            //                                                           .white,
+            //                                                       fontWeight:
+            //                                                           FontWeight
+            //                                                               .bold),
+            //                                                   textAlign:
+            //                                                       TextAlign
+            //                                                           .center,
+            //                                                 )),
+            //                                           )
+            //                                         ],
+            //                                       ),
+            //                                     );
+            //                                   }),
+            //                                   SizedBox(
+            //                                     height: h / 80,
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       Get.to(
+            //                                           () => const YourOrder());
+            //                                     },
+            //                                     child: Container(
+            //                                       width: w,
+            //                                       padding: EdgeInsets.all(8),
+            //                                       decoration: BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.circular(
+            //                                                   20)),
+            //                                       child: Text(
+            //                                         "Add to Order",
+            //                                         style: TextBold,
+            //                                         textAlign: TextAlign.center,
+            //                                       ),
+            //                                     ),
+            //                                   )
+            //                                 ]),
+            //                           ),
+            //                           SizedBox(
+            //                             height: h / 60,
+            //                           ),
+            //                           // GetBuilder<PizzaController>(builder:
+            //                           //     (PizzaController controller) {
+            //                           //   return Container(
+            //                           //     decoration: BoxDecoration(
+            //                           //         color: Colors.white,
+            //                           //         borderRadius:
+            //                           //             BorderRadius.circular(20),
+            //                           //         boxShadow: [
+            //                           //           BoxShadow(
+            //                           //               color: Colors.grey.shade300,
+            //                           //               blurRadius: 3)
+            //                           //         ]),
+            //                           //     child: Row(
+            //                           //       mainAxisAlignment:
+            //                           //           MainAxisAlignment.spaceBetween,
+            //                           //       children: [
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.decrement();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topLeft: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomLeft: Radius
+            //                           //                             .circular(
+            //                           //                                 20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "-",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         ),
+            //                           //         Text(
+            //                           //           "QTy:${controller.counter}",
+            //                           //           style: const TextStyle(
+            //                           //               color: Colors.black),
+            //                           //         ),
+            //                           //         InkWell(
+            //                           //           onTap: () {
+            //                           //             controller.increment();
+            //                           //           },
+            //                           //           child: Container(
+            //                           //               width: 40,
+            //                           //               decoration:
+            //                           //                   const BoxDecoration(
+            //                           //                 color: Colors.black,
+            //                           //                 borderRadius:
+            //                           //                     BorderRadius.only(
+            //                           //                         topRight: Radius
+            //                           //                             .circular(20),
+            //                           //                         bottomRight:
+            //                           //                             Radius
+            //                           //                                 .circular(
+            //                           //                                     20)),
+            //                           //               ),
+            //                           //               child: const Text(
+            //                           //                 "+",
+            //                           //                 style: TextStyle(
+            //                           //                     fontSize: 25,
+            //                           //                     color: Colors.white,
+            //                           //                     fontWeight:
+            //                           //                         FontWeight.bold),
+            //                           //                 textAlign:
+            //                           //                     TextAlign.center,
+            //                           //               )),
+            //                           //         )
+            //                           //       ],
+            //                           //     ),
+            //                           //   );
+            //                           // }),
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Cheese CAD4',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                   Theme(
+            //                     data: Theme.of(context)
+            //                         .copyWith(dividerColor: Colors.transparent),
+            //                     child: ExpansionTile(
+            //                         tilePadding: EdgeInsets.all(0),
+            //                         iconColor: Colors.black,
+            //                         title: Text('Capsicum CAD3',
+            //                             style: A_style_medium),
+            //                         children: [
+            //                           GetBuilder<PizzaController>(builder:
+            //                               (PizzaController controller) {
+            //                             return Container(
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.white,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20),
+            //                                   boxShadow: [
+            //                                     BoxShadow(
+            //                                         color: Colors.grey.shade300,
+            //                                         blurRadius: 3)
+            //                                   ]),
+            //                               child: Row(
+            //                                 mainAxisAlignment:
+            //                                     MainAxisAlignment.spaceBetween,
+            //                                 children: [
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.decrement();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topLeft: Radius
+            //                                                       .circular(20),
+            //                                                   bottomLeft: Radius
+            //                                                       .circular(
+            //                                                           20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "-",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   ),
+            //                                   Text(
+            //                                     "QTy:${controller.counter}",
+            //                                     style: const TextStyle(
+            //                                         color: Colors.black),
+            //                                   ),
+            //                                   InkWell(
+            //                                     onTap: () {
+            //                                       controller.increment();
+            //                                     },
+            //                                     child: Container(
+            //                                         width: 40,
+            //                                         decoration:
+            //                                             const BoxDecoration(
+            //                                           color: Colors.black,
+            //                                           borderRadius:
+            //                                               BorderRadius.only(
+            //                                                   topRight: Radius
+            //                                                       .circular(20),
+            //                                                   bottomRight:
+            //                                                       Radius
+            //                                                           .circular(
+            //                                                               20)),
+            //                                         ),
+            //                                         child: const Text(
+            //                                           "+",
+            //                                           style: TextStyle(
+            //                                               fontSize: 25,
+            //                                               color: Colors.white,
+            //                                               fontWeight:
+            //                                                   FontWeight.bold),
+            //                                           textAlign:
+            //                                               TextAlign.center,
+            //                                         )),
+            //                                   )
+            //                                 ],
+            //                               ),
+            //                             );
+            //                           }),
+            //                           SizedBox(
+            //                             height: h / 80,
+            //                           ),
+            //                           InkWell(
+            //                             onTap: () {
+            //                               Get.to(() => const YourOrder());
+            //                             },
+            //                             child: Container(
+            //                               width: w,
+            //                               padding: EdgeInsets.all(8),
+            //                               decoration: BoxDecoration(
+            //                                   color: Colors.black,
+            //                                   borderRadius:
+            //                                       BorderRadius.circular(20)),
+            //                               child: Text(
+            //                                 "Add to Order",
+            //                                 style: TextBold,
+            //                                 textAlign: TextAlign.center,
+            //                               ),
+            //                             ),
+            //                           )
+            //                         ]),
+            //                   ),
+            //                 ]);
+            //           });
+            //           /* Container(
+            //                 width: w / 1.043,
+            //                 decoration: const BoxDecoration(
+            //                   borderRadius: BorderRadius.only(
+            //                       bottomRight: Radius.circular(8),
+            //                       bottomLeft: Radius.circular(8)),
+            //                 ),
+            //                 child: Column(
+            //                   crossAxisAlignment: CrossAxisAlignment.start,
+            //                   children: [
+            //                     SizedBox(
+            //                       height: h / 30,
+            //                     ),
+            //                     Text(
+            //                       "Veg Pizza",
+            //                       style: TextBold,
+            //                     ),
+            //                     Text(
+            //                       deals[index]["size"],
+            //                       style: TextStyle(
+            //                           //letterSpacing: 2,
+            //                           overflow: TextOverflow.ellipsis,
+            //                           color: Colors.white,
+            //
+            //                           //  fontFamily: "Amazon_med",
+            //                           fontSize: 14),
+            //                       maxLines: 1,
+            //                     ),
+            //                     Row(
+            //                       mainAxisAlignment:
+            //                           MainAxisAlignment.spaceBetween,
+            //                       children: [
+            //                         Text(
+            //                           "CAD 49",
+            //                           style: TextBold,
+            //                         ),
+            //                         Container(
+            //                           padding: const EdgeInsets.symmetric(
+            //                               horizontal: 8, vertical: 2),
+            //                           decoration: BoxDecoration(
+            //                             color: primaryColor,
+            //                             borderRadius:
+            //                                 BorderRadius.circular(5),
+            //                           ),
+            //                           child: Text(
+            //                             "Order Now",
+            //                             style: Text_inside_button,
+            //                           ),
+            //                         )
+            //                       ],
+            //                     ),
+            //                   ],
+            //                 ),
+            //               ),*/
+            //         })
+            //     : const SizedBox(),
